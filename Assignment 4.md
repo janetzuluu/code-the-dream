@@ -1,102 +1,76 @@
-**Assignment: Python Operators, Control Flow, Calculator Implementation, and Data Manipulation with Pandas**
 
-**Objective:** In this assignment, you will practice using Python operators, control flow statements, implementing a simple calculator with a loop, and manipulating data using the Pandas library. Complete the tasks below, modifying the provided code where needed and adding your own implementations.
 
-### **Task 1: Arithmetic Operations**
-1. Create a function called `perform_operations` that takes two arguments (`a` and `b`).
+## **Assignment: Advanced Data Wrangling and Aggregation with Pandas**
 
-2. Implement the following arithmetic operations inside the function and print the results:
-   - Addition
-   - Subtraction
-   - Multiplication
-   - Division (handle the case where `b` is zero)
-   - Floor Division (handle the case where `b` is zero)
-   - Modulus (handle the case where `b` is zero)
-   - Exponentiation
+### **Objective:**
+The purpose of this assignment is to deepen your understanding of data wrangling and aggregation using the Pandas library in Python. You will work with sample DataFrames to perform various operations such as filtering, handling missing values, merging, sorting, transforming, and creating pivot tables.
 
-3. Call the function with example values `a = 10` and `b = 3` and print the results.
+### **Tasks:**
 
-### **Task 2: Comparison Operations**
-1. Create a function called `compare_numbers` that takes two arguments (`a` and `b`).
+### **Task 1: Data Selection**
+1. **Create two DataFrames `df1` and `df2` using the provided sample data:**
+   - `df1` contains names, ages, and salaries of five employees.
+   - `df2` contains names, ages, and salaries of five other employees.
+   - Display both DataFrames.
 
-2. Implement the following comparison operations inside the function and print the results:
-   - Equality (`==`)
-   - Inequality (`!=`)
-   - Greater than (`>`)
-   - Less than (`<`)
-   - Greater than or equal to (`>=`)
-   - Less than or equal to (`<=`)
+2. **Perform the following selection operations on `df1`:**
+   - Select the 'Name' column.
+   - Select both 'Name' and 'Salary' columns.
+   - Slice the first three rows using integer-based indexing (`iloc`).
 
-3. Call the function with example values `a = 10` and `b = 3` and print the results.
+### **Task 2: Data Aggregation**
+1. **Group `df1` by 'Age' and aggregate the 'Salary' column:**
+   - Calculate the mean, sum, and count of the salary for each age group.
+   - Display the aggregated results.
 
-### **Task 3: Calculator with User Input**
-1. Create a function called `calculator` that continuously asks the user for two numbers and an operation until they decide to quit.
+### **Task 3: Merging and Joining DataFrames**
+1. **Merge `df1` and `df2` on the 'Name' column:**
+   - Use an outer join to combine the two DataFrames and handle any missing data.
+   - Use the suffixes `_df1` and `_df2` to differentiate columns from each DataFrame.
 
-2. Implement the following features inside the function:
-   - Ask the user to input two numbers (`num1` and `num2`).
-   - Ask the user to input an operation (`+`, `-`, `*`, `/`) or `q` to quit the calculator.
-   - Perform the requested operation and print the result.
-   - Handle division by zero when the user inputs `/` and `num2` is zero.
-   - Handle invalid inputs using a `try-except` block to ensure the user inputs valid numbers.
+2. **Join `df1` and `df2` using the `join()` method:**
+   - Set 'Name' as the index before joining the DataFrames.
+   - Display the joined DataFrame with outer join logic.
 
-3. Call the `calculator` function to allow the user to perform calculations.
+### **Task 4: Filtering Rows Based on Conditions**
+1. **Filter rows in `df1` where 'Age' is greater than 30:**
+   - Display the filtered rows.
 
-### **Task 4: Data Manipulation with Pandas**
-1. **Creating and Manipulating DataFrames**
-   - Create a DataFrame from a dictionary containing the following data:
-     - `Name`: ['Alice', 'Bob', 'Charlie']
-     - `Age`: [25, 30, 35]
-     - `City`: ['New York', 'Los Angeles', 'Chicago']
-   - Print the DataFrame.
-   - Add a new column called `Salary` with values `[70000, 80000, 90000]` and print the updated DataFrame.
-   - Modify the `Age` column by incrementing each value by 1 and print the updated DataFrame.
+### **Task 5: Handling Missing Values**
+1. **Handle missing values in the merged DataFrame:**
+   - Replace any `NaN` values with 0.
+   - Display the updated DataFrame.
 
-2. **Loading Data from CSV and JSON Files**
-   - Load data from a CSV file (`sample_data.csv`) into a DataFrame and print it. (You can create the CSV file using the data from the previous step).
-   - Load data from a JSON file (`sample_data.json`) containing the following data:
-     ```json
-     [
-       {"Name": "Eve", "Age": 28, "City": "Miami"},
-       {"Name": "Frank", "Age": 40, "City": "Seattle"}
-     ]
-     ```
-   - Print the DataFrame loaded from the JSON file.
+### **Task 6: Sorting Data**
+1. **Sort `df1` by the 'Salary' column in descending order:**
+   - Display the sorted DataFrame.
 
-3. **Data Inspection**
-   - Use the `head()` method to print the first 5 rows of the DataFrame created from the dictionary.
-   - Use the `tail(2)` method to print the last 2 rows of the DataFrame.
-   - Use the `info()` method to print a concise summary of the DataFrame.
+### **Task 7: Renaming Columns**
+1. **Rename columns in `df1`:**
+   - Rename 'Age' to 'Employee Age' and 'Salary' to 'Employee Salary'.
+   - Display the DataFrame with the renamed columns.
 
-4. **Data Selection: Indexing and Slicing DataFrames**
-   - Use indexing to select the `Name` column from the DataFrame and print it.
-   - Select multiple columns (`Name` and `Salary`) and print them.
-   - Slice the first three rows of the DataFrame using `iloc` and print them.
+### **Task 8: Creating a Pivot Table**
+1. **Create a pivot table for `df1`:**
+   - Use 'Age' as the index and 'Salary' as the value.
+   - Aggregate the salary using the mean function.
+   - Display the pivot table.
 
-5. **Data Aggregation: Grouping Data Using groupby() and Aggregation Functions**
-   - Group the DataFrame by the `Age` column and aggregate the `Salary` column using `mean`, `sum`, and `count` functions. Print the resulting DataFrame.
+### **Task 9: Data Transformation**
+1. **Apply a transformation to the 'Salary' column in `df1`:**
+   - Increase the salary by 10% for each employee.
+   - Display the updated DataFrame.
 
-6. **Merging and Joining DataFrames**
-   - Create another DataFrame similar to the one created in Task 4.1 with different names and values.
-   - Merge the two DataFrames on the `Name` column using an outer join and print the merged DataFrame.
-   - Set the `Name` column as the index for both DataFrames and join them using the `join()` method. Print the resulting DataFrame.
+### **Task 10: Concatenating DataFrames**
+1. **Concatenate `df1` and `df2` along rows:**
+   - Reset the index before concatenating and display the concatenated DataFrame.
 
-7. **Data Saving**
-   - Save the modified DataFrame (created in Task 4.1) to a new CSV file named `modified_data.csv`.
-   - Save the DataFrame (loaded from JSON) to a new JSON file named `output_data.json`.
-
-8. **Advanced Data Manipulation**
-   - **Data Selection**: Using the sample DataFrame created earlier (`df1`), perform the following:
-     - Select the `Name` column and print it.
-     - Select the `Name` and `Salary` columns and print them.
-     - Slice the first three rows of the DataFrame using `iloc` and print them.
-   
-   - **Data Aggregation**: Group the sample DataFrame (`df1`) by the `Age` column and calculate the mean, sum, and count of the `Salary` column. Print the resulting DataFrame.
-   
-   - **Merging and Joining DataFrames**:
-     - Create a second sample DataFrame (`df2`) with different values.
-     - Merge `df1` and `df2` on the `Name` column using an outer join and print the result.
-     - Set the `Name` column as the index for both DataFrames and join them using the `join()` method. Print the resulting DataFrame.
+### **Task 11: Cross Tabulation**
+1. **Create a cross-tabulation of ages in the concatenated DataFrame:**
+   - Display the frequency of each age for different names.
 
 ### **Submission:**
-Submit your completed Python code, including all tasks, in a `.py` file or a Jupyter notebook. Make sure to include comments explaining your code where necessary.
+- Save your completed Python code in a `.py` file or Jupyter Notebook.
+- Ensure each task is implemented correctly and add comments to explain your code.
+- Submit the code file according to the guidelines provided by your instructor.
 
