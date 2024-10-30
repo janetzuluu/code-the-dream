@@ -1,68 +1,68 @@
-Assignment: Python Data Conversion, User Input, and Error Handling
+**Assignment: Python Basics - Data Conversion, User Input, Error Handling, and Functions**
 
-Objective: In this assignment, you will practice data type conversions, user input handling, and implementing functions with error handling in Python. Complete the tasks below, modifying the provided code where needed and adding your own implementations.
+**Objective:** In this assignment, you will practice Python programming concepts such as data type conversion, user input handling, error handling, and creating functions. Complete the tasks below, modifying the provided code where needed and adding your own implementations.
 
-Task 1: Data Type Conversions
+### **Task 1: Data Type Conversion**
+1. **String to Integer Conversion**
+   - Convert the variable `num_str` (a string representing a number) to an integer.
+   - Perform arithmetic using the converted integer and another variable `age`.
+   - Print the result.
 
-String to Integer Conversion
+2. **Float to String Conversion**
+   - Convert the variable `height` (a float) to a string.
+   - Concatenate the float value as a string with another string (e.g., " meters").
+   - Print the result.
 
-You have a string variable num_str that represents a number (e.g., "50"). Convert it to an integer and perform arithmetic with another variable called age (an integer). Print the result.
+3. **Integer to Float Conversion**
+   - Convert the variable `age` (an integer) to a float and print the result.
 
-Float to String Conversion
+### **Task 2: Simple Calculator**
+1. **User Input**
+   - Ask the user to enter two numbers (`num1` and `num2`).
 
-Convert a float variable height to a string. Print the float value as a string and concatenate it with another string, such as " meters".
+2. **Perform Arithmetic Operations**
+   - Perform addition, subtraction, multiplication, and division on the two numbers.
+   - Handle the case where the user attempts to divide by zero and print an appropriate error message.
 
-Integer to Float Conversion
+3. **Print Results**
+   - Print the results of the arithmetic operations.
 
-Convert an integer variable age to a float and print the result.
+### **Task 3: Grading System**
+1. **User Input for Score**
+   - Ask the user to enter their score (as a float value).
 
-Task 2: Simple Calculator with User Input
+2. **Determine Grade**
+   - Use conditional statements to assign a grade based on the score:
+     - **A**: 90 and above
+     - **B**: 80-89
+     - **C**: 70-79
+     - **D**: 60-69
+     - **F**: below 60
 
-Ask the user to enter two numbers (num1 and num2).
+3. **Print Grade**
+   - Print the grade assigned.
 
-Perform the following arithmetic operations and print the results:
+### **Task 4: Function to Calculate Average**
+1. **Create a Function**
+   - Create a function called `calculate_average` that takes a list of numbers as an argument.
 
-Addition
+2. **Calculate and Return Average**
+   - The function should calculate and return the average of the numbers in the list.
+   - If the list is empty, return 0.
 
-Subtraction
+3. **Test the Function**
+   - Test the function with the list `[1, 2, 3, 4, 5]` and print the result.
 
-Multiplication
+### **Task 5: Calculator with Error Handling**
+1. **Create a Function for Division**
+   - Create a function called `divide_numbers` that takes two arguments (`num1` and `num2`).
 
-Division (handle the case where num2 is zero to avoid division errors)
+2. **Implement Error Handling**
+   - Use a `try-except` block to handle division by zero and return an appropriate error message.
 
-Task 3: Grading System
+3. **Test the Function**
+   - Ask the user to input two numbers, call the `divide_numbers` function, and print the result.
 
-Ask the user to enter their score (as a float value).
-
-Use conditional statements to assign a grade based on the score:
-
-A: 90 and above
-
-B: 80-89
-
-C: 70-79
-
-D: 60-69
-
-F: below 60
-
-Print the grade assigned.
-
-Task 4: Functions with Lists
-
-Create a function called calculate_average that takes a list of numbers as an argument and returns the average.
-
-Test the function with the list [1, 2, 3, 4, 5] and print the result.
-
-Task 5: Error Handling in Functions
-
-Create a function called divide_numbers that takes two arguments (num1 and num2).
-
-Implement error handling in the function to handle division by zero (use a try-except block).
-
-Ask the user to enter two numbers, call the divide_numbers function, and print the result.
-
-Submission:
-
-Submit your completed Python code, including all tasks, in a .py file or a Jupyter notebook. Make sure to include comments explaining your code where necessary.
+### **Submission:**
+Submit your completed Python code, including all tasks, in a `.py` file or a Jupyter notebook. Make sure to include comments explaining your code where necessary.
 
