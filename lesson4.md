@@ -1,4 +1,4 @@
-```markdown
+
 # **Lesson 04 — Data Wrangling and Aggregation**
 
 ## **Lesson Overview**
