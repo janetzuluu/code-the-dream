@@ -435,7 +435,7 @@ except ZeroDivisionError:
 ---
 This content was created by Janet Zulu, Reid Russom, and CTD volunteers. To submit feedback, please fill out the [CTD Curriculum Feedback Form](https://airtable.com/apphJi94mO4Uc7a3k/pagD3WQmswgXJvgx3/form).
 
-## 2.3 Working with the OS
+## 2.5 Working with the OS
 
 The `os` module in Python provides a powerful interface for interacting with the operating system. It enables you to perform various tasks, including:
 
@@ -533,7 +533,7 @@ print(path_variable)
 
 ---
 
-## 2.4 Virtual Environments
+## 2.6 Virtual Environments
 
 Virtual environments are a cornerstone of Python development, particularly when managing dependencies and isolating project environments. A virtual environment creates an isolated Python environment, enabling you to have project-specific dependencies that won't interfere with other projects or system-wide Python packages.
 
@@ -626,3 +626,129 @@ Virtual environments are a cornerstone of Python development, particularly when 
 7. **Virtual Environment with IDEs**
 
    Many IDEs, like VS Code and PyCharm, allow you to configure the Python interpreter to use the virtual environment. This ensures that the IDE uses the correct Python environment with all the necessary packages installed.
+
+## 2.7 Using *args and **kwargs
+
+Functions can be made more flexible by allowing them to handle an arbitrary number of arguments.
+
+**What are *args?**
+
+*args allows a function to accept any number of positional arguments, which are collected into a tuple.
+
+**Example:**
+
+```python
+def add_numbers(*args):
+    return sum(args)
+
+print(add_numbers(1, 2, 3, 4))  # Output: 10
+```
+
+**Key Points:**
+
+* Use *args when the exact number of arguments isn't known beforehand.
+* The collected arguments are treated as a tuple.
+
+**What are **kwargs?**
+
+**kwargs allows a function to accept any number of keyword arguments, which are collected into a dictionary.
+
+**Example:**
+
+```python
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Janet", role="Developer", age=25)
+```
+
+**Key Points:**
+
+* Use **kwargs when you expect dynamic named parameters.
+* The collected arguments are treated as a dictionary.
+
+**Combining *args and **kwargs**
+
+You can use both together to handle a mix of positional and keyword arguments.
+
+**Example:**
+
+```python
+def mixed_function(*args, **kwargs):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+mixed_function(1, 2, 3, name="Janet", role="Developer")
+```
+
+**Output:**
+
+```
+Positional arguments: (1, 2, 3)
+Keyword arguments: {'name': 'Janet', 'role': 'Developer'}
+```
+
+# 2.8 Introduction to Modules
+
+A module is a Python file containing functions, classes, or variables that can be reused in other files.
+
+**Importing a Module**
+
+You can use the import statement to access functions or variables from a module.
+
+**Example:**
+
+```python
+# my_module.py
+def greet(name):
+    return f"Hello, {name}!"
+
+# main.py
+import my_module
+
+print(my_module.greet("Janet"))
+```
+
+**Benefits of Modules**
+
+* Code reusability and organization.
+* Simplifies debugging by dividing code into smaller, manageable files.
+
+## 2.9 Creating and Using Packages
+
+A package is a collection of related modules organized into a directory with an __init__.py file.
+
+**Example Structure:**
+
+```
+my_package/
+    __init__.py
+    math_tools.py
+    string_tools.py
+```
+
+**Using a Package**
+
+You can import specific modules from a package.
+
+**Example:**
+
+```python
+from my_package import math_tools
+
+print(math_tools.add(2, 3))
+```
+
+**Why Use Packages?**
+
+* Organizes code for larger projects.
+* Supports modular programming practices.
+
+**Check for Understanding**
+
+* What is the difference between *args and **kwargs in Python?
+* How do you import a specific function from a module?
+* What is the purpose of an __init__.py file in a package?
+```
+
